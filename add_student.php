@@ -220,7 +220,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u44" class="ax_default _默认样式" data-label="输入框">
           <div id="u44_div" class=""></div>
-          <input id="u44_input" type="text" value="" class="u44_input" maxlength="20"/>
+          <input name="FirstName" id="u44_input" type="text" value="" class="u44_input" maxlength="20"/>
         </div>
 
         <!-- 1 (Shape) -->
@@ -246,7 +246,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u48" class="ax_default _默认样式" data-label="输入框">
           <div id="u48_div" class=""></div>
-          <input id="u48_input" type="text" value="" class="u48_input" maxlength="20"/>
+          <input name="StudentID" id="u48_input" type="text" value="" class="u48_input" maxlength="20"/>
         </div>
 
         <!-- 3 (Shape) -->
@@ -318,7 +318,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u59" class="ax_default _默认样式" data-label="输入框">
           <div id="u59_div" class=""></div>
-          <input id="u59_input" type="text" value="" class="u59_input" maxlength="20"/>
+          <input name="Email" id="u59_input" type="text" value="" class="u59_input" maxlength="20"/>
         </div>
 
         <!-- 4 (Shape) -->
@@ -384,7 +384,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u68" class="ax_default _默认样式" data-label="输入框">
           <div id="u68_div" class=""></div>
-          <input id="u68_input" type="text" value="" class="u68_input" maxlength="20"/>
+          <input name="LastName" id="u68_input" type="text" value="" class="u68_input" maxlength="20"/>
         </div>
 
         <!-- 2 (Shape) -->
@@ -407,3 +407,8 @@
     <script src="resources/scripts/axure/ios.js"></script>
   </body>
 </html>
+
+
+<?php
+
+?>
