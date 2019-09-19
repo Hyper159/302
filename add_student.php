@@ -1,414 +1,51 @@
-﻿<!DOCTYPE html>
-<html>
-  <head>
-    <title>Add_Student</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/add_student/styles.css" type="text/css" rel="stylesheet"/>
-    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
-    <script src="resources/scripts/axure/axQuery.js"></script>
-    <script src="resources/scripts/axure/globals.js"></script>
-    <script src="resources/scripts/axutils.js"></script>
-    <script src="resources/scripts/axure/annotation.js"></script>
-    <script src="resources/scripts/axure/axQuery.std.js"></script>
-    <script src="resources/scripts/axure/doc.js"></script>
-    <script src="resources/scripts/messagecenter.js"></script>
-    <script src="resources/scripts/axure/events.js"></script>
-    <script src="resources/scripts/axure/recording.js"></script>
-    <script src="resources/scripts/axure/action.js"></script>
-    <script src="resources/scripts/axure/expr.js"></script>
-    <script src="resources/scripts/axure/geometry.js"></script>
-    <script src="resources/scripts/axure/flyout.js"></script>
-    <script src="resources/scripts/axure/model.js"></script>
-    <script src="resources/scripts/axure/repeater.js"></script>
-    <script src="resources/scripts/axure/sto.js"></script>
-    <script src="resources/scripts/axure/utils.temp.js"></script>
-    <script src="resources/scripts/axure/variables.js"></script>
-    <script src="resources/scripts/axure/drag.js"></script>
-    <script src="resources/scripts/axure/move.js"></script>
-    <script src="resources/scripts/axure/visibility.js"></script>
-    <script src="resources/scripts/axure/style.js"></script>
-    <script src="resources/scripts/axure/adaptive.js"></script>
-    <script src="resources/scripts/axure/tree.js"></script>
-    <script src="resources/scripts/axure/init.temp.js"></script>
-    <script src="resources/scripts/axure/legacy.js"></script>
-    <script src="resources/scripts/axure/viewer.js"></script>
-    <script src="resources/scripts/axure/math.js"></script>
-    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
-    <script src="data/document.js"></script>
-    <script src="files/add_student/data.js"></script>
-    <script type="text/javascript">
-      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
-      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
-      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
-    </script>
-  </head>
-  <body>
-    <div id="base" class="">
-
-      <!-- Unnamed (header) -->
-
-      <!-- header-manu (Dynamic Panel) -->
-      <div id="u21" class="ax_default" data-label="header-manu">
-        <div id="u21_state0" class="panel_state" data-label="State1" style="">
-          <div id="u21_state0_content" class="panel_state_content">
-          </div>
-        </div>
-      </div>
-
-      <!-- header-back (Dynamic Panel) -->
-      <div id="u22" class="ax_default" data-label="header-back">
-        <div id="u22_state0" class="panel_state" data-label="State1" style="">
-          <div id="u22_state0_content" class="panel_state_content">
-          </div>
-        </div>
-      </div>
-
-      <!-- Welcome (Rectangle) -->
-      <div id="u23" class="ax_default heading_1" data-label="Welcome">
-        <div id="u23_div" class=""></div>
-        <div id="u23_text" class="text ">
-          <p><span style="text-decoration:none;">Welcome, Nicole Herbert</span></p>
-        </div>
-      </div>
-
-      <!-- Log_out (Rectangle) -->
-      <div id="u24" class="ax_default box_1" data-label="Log_out">
-        <div id="u24_div" class=""></div>
-        <div id="u24_text" class="text ">
-          <p><span style="text-decoration:none;">Log out</span></p>
-        </div>
-      </div>
-
-      <!-- Export (Rectangle) -->
-      <div id="u25" class="ax_default box_1" data-label="Export">
-        <div id="u25_div" class=""></div>
-        <div id="u25_text" class="text ">
-          <p><span style="text-decoration:none;">Export Results</span></p>
-        </div>
-      </div>
-
-      <!-- Display (Rectangle) -->
-      <div id="u26" class="ax_default box_1" data-label="Display">
-        <div id="u26_div" class=""></div>
-        <div id="u26_text" class="text ">
-          <p><span style="text-decoration:none;">Display Details</span></p>
-        </div>
-      </div>
-
-      <!-- Relate (Rectangle) -->
-      <div id="u27" class="ax_default box_1" data-label="Relate">
-        <div id="u27_div" class=""></div>
-        <div id="u27_text" class="text ">
-          <p><span style="text-decoration:none;">Relate Student &amp; Employer</span></p>
-        </div>
-      </div>
-
-      <!-- Home (Rectangle) -->
-      <div id="u28" class="ax_default box_1" data-label="Home">
-        <div id="u28_div" class=""></div>
-        <div id="u28_text" class="text ">
-          <p><span style="text-decoration:none;">Home</span></p>
-        </div>
-      </div>
-
-      <!-- UTAS_LOGO (SVG) -->
-      <div id="u29" class="ax_default image" data-label="UTAS_LOGO">
-        <img id="u29_img" class="img " src="images/home/utas_logo_u9.svg"/>
-        <div id="u29_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- 导航栏 (Group) -->
-      <div id="u30" class="ax_default" data-label="导航栏" data-left="344" data-top="59" data-width="136" data-height="40">
-
-        <!-- Unnamed (Group) -->
-        <div id="u31" class="ax_default" data-left="344" data-top="59" data-width="136" data-height="40">
-
-          <!-- Unnamed (Rectangle) -->
-          <div id="u32" class="ax_default _默认样式" selectiongroup="u20导航栏-3">
-            <div id="u32_div" class=""></div>
-            <div id="u32_text" class="text ">
-              <p><span style="text-decoration:none;">Add Account</span></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 下拉菜单 (Dynamic Panel) -->
-        <div id="u33" class="ax_default ax_default_hidden" data-label="下拉菜单" style="display:none; visibility: hidden">
-          <div id="u33_state0" class="panel_state" data-label="State1" style="">
-            <div id="u33_state0_content" class="panel_state_content">
-
-              <!-- Unnamed (Rectangle) -->
-              <div id="u34" class="ax_default _默认样式">
-                <div id="u34_div" class=""></div>
-                <div id="u34_text" class="text " style="display:none; visibility: hidden">
-                  <p></p>
-                </div>
-              </div>
-
-              <!-- Unnamed (Rectangle) -->
-              <div id="u35" class="ax_default _默认样式">
-                <div id="u35_div" class=""></div>
-                <div id="u35_text" class="text ">
-                  <p><span style="text-decoration:none;">Add Student</span></p>
-                </div>
-              </div>
-
-              <!-- Unnamed (Rectangle) -->
-              <div id="u36" class="ax_default _默认样式">
-                <div id="u36_div" class=""></div>
-                <div id="u36_text" class="text ">
-                  <p><span style="text-decoration:none;">Add Employer</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="u20" style="display:none; visibility:hidden;"></div>
-
-      <!-- Unnamed (body) -->
-
-      <!-- Unnamed (Dynamic Panel) -->
-      <div id="u38" class="ax_default">
-        <div id="u38_state0" class="panel_state" data-label="State1" style="">
-          <div id="u38_state0_content" class="panel_state_content">
-
-            <!-- Body_Back (Rectangle) -->
-            <div id="u39" class="ax_default box_1" data-label="Body_Back">
-              <div id="u39_div" class=""></div>
-              <div id="u39_text" class="text " style="display:none; visibility: hidden">
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="u37" style="display:none; visibility:hidden;"></div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u40" class="ax_default _默认样式">
-        <div id="u40_div" class=""></div>
-        <div id="u40_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u41" class="ax_default _默认样式">
-        <div id="u41_div" class=""></div>
-        <div id="u41_text" class="text ">
-          <p><span style="text-decoration:none;">Add Student</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Group) -->
-      <div id="u42" class="ax_default" data-left="424" data-top="274" data-width="278" data-height="40">
-
-        <!-- 边框 (Rectangle) -->
-        <div id="u43" class="ax_default _默认样式" data-label="边框">
-          <img id="u43_img" class="img " src="images/add_student/边框_u43.svg"/>
-          <div id="u43_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-
-        <!-- 输入框 (Text Field) -->
-        <div id="u44" class="ax_default _默认样式" data-label="输入框">
-          <div id="u44_div" class=""></div>
-          <input name="FirstName" id="u44_input" type="text" value="" class="u44_input" maxlength="20"/>
-        </div>
-
-        <!-- 1 (Shape) -->
-        <div id="u45" class="ax_default icon" data-label="1">
-          <img id="u45_img" class="img " src="images/add_student/1_u45.svg"/>
-          <div id="u45_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 输入框 (Group) -->
-      <div id="u46" class="ax_default" data-label="输入框" data-left="424" data-top="394" data-width="278" data-height="40">
-
-        <!-- 边框 (Rectangle) -->
-        <div id="u47" class="ax_default _默认样式" data-label="边框">
-          <img id="u47_img" class="img " src="images/add_student/边框_u43.svg"/>
-          <div id="u47_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-
-        <!-- 输入框 (Text Field) -->
-        <div id="u48" class="ax_default _默认样式" data-label="输入框">
-          <div id="u48_div" class=""></div>
-          <input name="StudentID" id="u48_input" type="text" value="" class="u48_input" maxlength="20"/>
-        </div>
-
-        <!-- 3 (Shape) -->
-        <div id="u49" class="ax_default icon" data-label="3">
-          <img id="u49_img" class="img " src="images/add_student/1_u45.svg"/>
-          <div id="u49_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 输入框 (Group) -->
-      <div id="u50" class="ax_default" data-label="输入框" data-left="0" data-top="0" data-width="0" data-height="0">
-      </div>
-
-      <!-- 输入框 (Group) -->
-      <div id="u51" class="ax_default" data-label="输入框" data-left="424" data-top="514" data-width="278" data-height="40">
-
-        <!-- 边框 (Rectangle) -->
-        <div id="u52" class="ax_default _默认样式" data-label="边框">
-          <img id="u52_img" class="img " src="images/add_student/边框_u43.svg"/>
-          <div id="u52_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-
-        <!-- 输入框 (Text Field) -->
-        <div id="u53" class="ax_default _默认样式" data-label="输入框">
-          <div id="u53_div" class=""></div>
-          <input id="u53_input" type="password" value="" class="u53_input" maxlength="20"/>
-        </div>
-
-        <!-- 5 (Shape) -->
-        <div id="u54" class="ax_default icon" data-label="5">
-          <img id="u54_img" class="img " src="images/add_student/1_u45.svg"/>
-          <div id="u54_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u55" class="ax_default _默认样式">
-        <div id="u55_div" class=""></div>
-        <div id="u55_text" class="text ">
-          <p><span style="text-decoration:none;">Submit</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u56" class="ax_default _默认样式">
-        <div id="u56_div" class=""></div>
-        <div id="u56_text" class="text ">
-          <p><span style="text-decoration:none;">Cancel</span></p>
-        </div>
-      </div>
-
-      <!-- 输入框 (Group) -->
-      <div id="u57" class="ax_default" data-label="输入框" data-left="424" data-top="455" data-width="278" data-height="40">
-
-        <!-- 边框 (Rectangle) -->
-        <div id="u58" class="ax_default _默认样式" data-label="边框">
-          <img id="u58_img" class="img " src="images/add_student/边框_u43.svg"/>
-          <div id="u58_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-
-        <!-- 输入框 (Text Field) -->
-        <div id="u59" class="ax_default _默认样式" data-label="输入框">
-          <div id="u59_div" class=""></div>
-          <input name="Email" id="u59_input" type="text" value="" class="u59_input" maxlength="20"/>
-        </div>
-
-        <!-- 4 (Shape) -->
-        <div id="u60" class="ax_default icon" data-label="4">
-          <img id="u60_img" class="img " src="images/add_student/1_u45.svg"/>
-          <div id="u60_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u61" class="ax_default box_1">
-        <img id="u61_img" class="img " src="images/add_student/u61.svg"/>
-        <div id="u61_text" class="text ">
-          <p><span style="text-decoration:none;">@utas.edu.au</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u62" class="ax_default _默认样式">
-        <div id="u62_div" class=""></div>
-        <div id="u62_text" class="text ">
-          <p><span style="text-decoration:none;">First Name </span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u63" class="ax_default _默认样式">
-        <div id="u63_div" class=""></div>
-        <div id="u63_text" class="text ">
-          <p><span style="text-decoration:none;">Student ID Number </span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u64" class="ax_default _默认样式">
-        <div id="u64_div" class=""></div>
-        <div id="u64_text" class="text ">
-          <p><span style="text-decoration:none;">E-mail </span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u65" class="ax_default _默认样式">
-        <div id="u65_div" class=""></div>
-        <div id="u65_text" class="text ">
-          <p><span style="text-decoration:none;">Initial Password </span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Group) -->
-      <div id="u66" class="ax_default" data-left="424" data-top="334" data-width="278" data-height="40">
-
-        <!-- 边框 (Rectangle) -->
-        <div id="u67" class="ax_default _默认样式" data-label="边框">
-          <img id="u67_img" class="img " src="images/add_student/边框_u43.svg"/>
-          <div id="u67_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-
-        <!-- 输入框 (Text Field) -->
-        <div id="u68" class="ax_default _默认样式" data-label="输入框">
-          <div id="u68_div" class=""></div>
-          <input name="LastName" id="u68_input" type="text" value="" class="u68_input" maxlength="20"/>
-        </div>
-
-        <!-- 2 (Shape) -->
-        <div id="u69" class="ax_default icon" data-label="2">
-          <img id="u69_img" class="img " src="images/add_student/1_u45.svg"/>
-          <div id="u69_text" class="text " style="display:none; visibility: hidden">
-            <p></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u70" class="ax_default _默认样式">
-        <div id="u70_div" class=""></div>
-        <div id="u70_text" class="text ">
-          <p><span style="text-decoration:none;">Last Name </span></p>
-        </div>
-      </div>
-    </div>
-    <script src="resources/scripts/axure/ios.js"></script>
-  </body>
-</html>
-
-
 <?php
+include('db_conn.php');
+if(isset($_POST['Email'])) {
+    $firstName = $_POST['FirstName'];
+    $lastName = $_POST['LastName'];
+    $studentNum = $_POST['StudentNumber'];
+    $email = $_POST['Email'];
+    $password = $_POST['Password'];
+
+    
+    $insertPassword = "INSERT INTO user (Password) VALUES ('$password');";
+    //execute query to the database and retrieve the result ($result)
+    $result = $mysqli->query($insertPassword);
+
+    $selectUserID = "SELECT UserID from user where Password = '$password';";
+    $result = $mysqli->query($selectUserID);
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+    $studentID = $row['UserID'];
+
+    $insertUserID = "INSERT INTO student (StudentID) VALUES ('$studentID')";
+    $result = $mysqli->query($insertUserID);
+
+    $updateStudentID = "UPDATE student 
+    SET FirstName = '$firstName', LastName = '$lastName', StudentNumber = '$studentNum', EmailAddress = '$email'
+    WHERE StudentID = '$studentID';";
+
+    $result = $mysqli->query($updateStudentID);
+
+    //query to check whether username is in the table (check whether the user has been signed up)
+    /*$query = "SELECT * FROM user WHERE UserID='$studentID'";
+    //execute query to the database and retrieve the result ($result)
+    $result = $mysqli->query($query);
+
+    //convert the result to array (the key of the array will be the column names of the table)
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+    $errorMessage = '';
+    if($row['UserID']==$studentID)
+    {
+        $errorMessage='studentID already exists.';
+    }else{
+        $insertquery="INSERT INTO user (Password) VALUES ('$password');";
+        //INSERT INTO student (StudentID,FirstName,LastName,EmailAddress)
+        //VALUES ('$studentID','$firstName','$lastName','$email');
+        $result=$mysqli->query($insertquery);
+    }
+    */
+    header('Location: ./add_student.html');
+
+}
 
 ?>

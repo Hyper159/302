@@ -190,6 +190,9 @@
       </div>
       <div id="u88" style="display:none; visibility:hidden;"></div>
 
+
+
+      <form id="addForm" action="./add_employer.php" method="post">
       <!-- Unnamed (Rectangle) -->
       <div id="u91" class="ax_default _默认样式">
         <div id="u91_div" class=""></div>
@@ -220,7 +223,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u95" class="ax_default _默认样式" data-label="输入框">
           <div id="u95_div" class=""></div>
-          <input id="u95_input" type="text" value="" class="u95_input" maxlength="20"/>
+          <input name="FirstName" id="u95_input" type="text" value="" class="u95_input" maxlength="20"/>
         </div>
 
         <!-- 1 (Shape) -->
@@ -246,7 +249,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u99" class="ax_default _默认样式" data-label="输入框">
           <div id="u99_div" class=""></div>
-          <input id="u99_input" type="text" value="" class="u99_input" maxlength="20"/>
+          <input name="Email" id="u99_input" type="email" value="" class="u99_input" maxlength="20"/>
         </div>
 
         <!-- 3 (Shape) -->
@@ -272,7 +275,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u103" class="ax_default _默认样式" data-label="输入框">
           <div id="u103_div" class=""></div>
-          <input id="u103_input" type="password" value="" class="u103_input" maxlength="20"/>
+          <input name="Password" id="u103_input" type="password" value="" class="u103_input" maxlength="20"/>
         </div>
 
         <!-- 4 (Shape) -->
@@ -285,7 +288,7 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u105" class="ax_default _默认样式">
+      <div id="u105" class="ax_default _默认样式" onclick="document.getElementById('addForm').submit();">
         <div id="u105_div" class=""></div>
         <div id="u105_text" class="text ">
           <p><span style="text-decoration:none;">Submit</span></p>
@@ -293,7 +296,7 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u106" class="ax_default _默认样式">
+      <div id="u106" class="ax_default _默认样式" onclick="document.getElementById('addForm').reset()">
         <div id="u106_div" class=""></div>
         <div id="u106_text" class="text ">
           <p><span style="text-decoration:none;">Cancel</span></p>
@@ -338,7 +341,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u112" class="ax_default _默认样式" data-label="输入框">
           <div id="u112_div" class=""></div>
-          <input id="u112_input" type="text" value="" class="u112_input" maxlength="20"/>
+          <input name="LastName" id="u112_input" type="text" value="" class="u112_input" maxlength="20"/>
         </div>
 
         <!-- 2 (Shape) -->
@@ -372,7 +375,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u117" class="ax_default _默认样式" data-label="输入框">
           <div id="u117_div" class=""></div>
-          <input id="u117_input" type="text" value="" class="u117_input" maxlength="20"/>
+          <input name="OrganisationName" id="u117_input" type="text" value="" class="u117_input" maxlength="20"/>
         </div>
 
         <!-- 3 (Shape) -->
@@ -406,7 +409,7 @@
         <!-- 输入框 (Text Field) -->
         <div id="u122" class="ax_default _默认样式" data-label="输入框">
           <div id="u122_div" class=""></div>
-          <input id="u122_input" type="text" value="" class="u122_input" maxlength="20"/>
+          <input name="OrganisationWebsite" id="u122_input" type="text" value="" class="u122_input" maxlength="20"/>
         </div>
 
         <!-- 3 (Shape) -->
@@ -425,6 +428,8 @@
           <p><span style="text-decoration:none;">Organisation Website&nbsp; </span></p>
         </div>
       </div>
+      </form>
+
     </div>
     <script src="resources/scripts/axure/ios.js"></script>
   </body>
