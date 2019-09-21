@@ -248,7 +248,7 @@
             <!-- 输入框 (Text Field) -->
             <div id="u48" class="ax_default _默认样式" data-label="输入框">
                 <div id="u48_div" class=""></div>
-                <input name="StudentNumber" id="u48_input" type="text" value="" class="u48_input" maxlength="20" required/>
+                <input name="StudentNumber" id="u48_input" type="text" value="" class="u48_input" maxlength="20" />
             </div>
 
             <!-- 3 (Shape) -->
@@ -291,12 +291,27 @@
         </div>
 
         <!-- Unnamed (Rectangle) -->
-        <div id="u55"  class="ax_default _默认样式" onclick="document.getElementById('addForm').submit();">
+        <div id="u55"  class="ax_default _默认样式" onclick= divSubmit();>
             <div id="u55_div" class=""></div>
             <div id="u55_text" class="text ">
                 <p><span style="text-decoration:none">Submit</span></p>
             </div>
         </div>
+        <script>
+            function divSubmit() {
+                var a = document.getElementById("u59_input").value;
+                var b = document.getElementById("u53_input").value;
+                if (a == "Enter Username"){
+                    alert("Please enter a Email");
+                }else if (b == "Enter Initial Password"){
+                    alert("Please enter a Password")
+                }
+                else {
+                    //alert(a+'123');
+                    document.getElementById('addForm').submit();
+                }
+            }
+        </script>
 
 
         <!-- Unnamed (Rectangle) -->
@@ -412,4 +427,5 @@
 
 </body>
 </html>
+
 

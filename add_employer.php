@@ -9,7 +9,7 @@ if(isset($_POST['Email'])) {
     $password = $_POST['Password'];
 
 
-    $insertPassword = "INSERT INTO user (Password) VALUES ('$password');";
+    $insertPassword = "INSERT INTO user (Password, RoleID, RoleLevel) VALUES ('$password', 'Employer', '2');";
     //execute query to the database and retrieve the result ($result)
     $result = $mysqli->query($insertPassword);
 

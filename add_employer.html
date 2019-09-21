@@ -288,12 +288,27 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u105" class="ax_default _默认样式" onclick="document.getElementById('addForm').submit();">
+      <div id="u105" class="ax_default _默认样式" onclick= divSubmit()>
         <div id="u105_div" class=""></div>
         <div id="u105_text" class="text ">
           <p><span style="text-decoration:none;">Submit</span></p>
         </div>
       </div>
+        <script>
+          function divSubmit() {
+            var a = document.getElementById("u99_input").value;
+            var b = document.getElementById("u103_input").value;
+            if (a == "Enter E-mail Address"){
+              alert("Please enter a Email");
+            }else if (b == "Enter Initial Password"){
+              alert("Please enter a Password")
+          }
+            else {
+              //alert(a+'123');
+              document.getElementById('addForm').submit();
+            }
+          }
+        </script>
 
       <!-- Unnamed (Rectangle) -->
       <div id="u106" class="ax_default _默认样式" onclick="document.getElementById('addForm').reset()">
