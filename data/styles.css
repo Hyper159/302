@@ -79,6 +79,9 @@
   color:#000000;
   text-align:left;
 }
+.checkbox {
+  text-align:left;
+}
 .table_cell {
 }
 .line {
@@ -94,7 +97,7 @@
 }
 .connector {
 }
-._默认样式 {
+.default_style {
 }
 .icon {
 }
