@@ -44,6 +44,7 @@ if(isset($_POST['Email'])) {
         $result=$mysqli->query($insertquery);
     }
     */
+
     header('Location: ./add_student.html');
 
 }
