@@ -44,6 +44,24 @@
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
     </script>
+    <!--export excel-->
+    <script src="functions/exportexcel/export.js"></script>    
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>    
+    <script src="functions/exportexcel/jquery-table2excel.js"></script>    
+    <script>    
+        $(function() {    
+            $("#btn").click(function(){    
+                $(".table2excel").table2excel({    
+                    exclude: ".noExl",    
+                    name: "Excel Document Name",    
+                    filename: "myFileName",    
+                    exclude_img: true,    
+                    exclude_links: true,    
+                    exclude_inputs: true    
+                });    
+            });    
+        });    
+    </script>    
   </head>
   <body>
     <div id="base" class="">
@@ -147,7 +165,7 @@
               </div>
 
               <!-- Unnamed (Rectangle) -->
-              <div id="u14" class="ax_default default_style">
+              <div id="u14" class="ax_default default_style" selectiongroup="u0MenuSelection">
                 <div id="u14_div" class=""></div>
                 <div id="u14_text" class="text ">
                   <p><span style="text-decoration:none;">Add Student</span></p>
@@ -155,7 +173,7 @@
               </div>
 
               <!-- Unnamed (Rectangle) -->
-              <div id="u15" class="ax_default default_style">
+              <div id="u15" class="ax_default default_style" selectiongroup="u0MenuSelection">
                 <div id="u15_div" class=""></div>
                 <div id="u15_text" class="text ">
                   <p><span style="text-decoration:none;">Add Employer</span></p>
@@ -245,7 +263,7 @@
                         <div id="u27_state0_content" class="panel_state_content">
 
                           <!-- 2018 (Rectangle) -->
-                          <div id="u28" class="ax_default box_1" data-label="2018" selectiongroup="下拉选项组2">
+                          <div id="u28" class="ax_default box_1" data-label="2018" selectiongroup="SelectionGroup">
                             <div id="u28_div" class=""></div>
                             <div id="u28_text" class="text ">
                               <p><span style="text-decoration:none;">2018</span></p>
@@ -253,7 +271,7 @@
                           </div>
 
                           <!-- 2019 (Rectangle) -->
-                          <div id="u29" class="ax_default box_1" data-label="2019" selectiongroup="下拉选项组2">
+                          <div id="u29" class="ax_default box_1" data-label="2019" selectiongroup="SelectionGroup">
                             <div id="u29_div" class=""></div>
                             <div id="u29_text" class="text ">
                               <p><span style="text-decoration:none;">2019</span></p>
@@ -261,7 +279,7 @@
                           </div>
 
                           <!-- 2020 (Rectangle) -->
-                          <div id="u30" class="ax_default box_1" data-label="2020" selectiongroup="下拉选项组2">
+                          <div id="u30" class="ax_default box_1" data-label="2020" selectiongroup="SelectionGroup">
                             <div id="u30_div" class=""></div>
                             <div id="u30_text" class="text ">
                               <p><span style="text-decoration:none;">2020</span></p>
@@ -269,7 +287,7 @@
                           </div>
 
                           <!-- None (Rectangle) -->
-                          <div id="u31" class="ax_default box_1" data-label="None" selectiongroup="下拉选项组2">
+                          <div id="u31" class="ax_default box_1" data-label="None" selectiongroup="SelectionGroup">
                             <div id="u31_div" class=""></div>
                             <div id="u31_text" class="text ">
                               <p><span style="text-decoration:none;">None</span></p>
@@ -277,7 +295,7 @@
                           </div>
 
                           <!-- 2017 (Rectangle) -->
-                          <div id="u32" class="ax_default box_1" data-label="2017" selectiongroup="下拉选项组2">
+                          <div id="u32" class="ax_default box_1" data-label="2017" selectiongroup="SelectionGroup">
                             <div id="u32_div" class=""></div>
                             <div id="u32_text" class="text ">
                               <p><span style="text-decoration:none;">2017</span></p>
@@ -285,7 +303,7 @@
                           </div>
 
                           <!-- 2016 (Rectangle) -->
-                          <div id="u33" class="ax_default box_1" data-label="2016" selectiongroup="下拉选项组2">
+                          <div id="u33" class="ax_default box_1" data-label="2016" selectiongroup="SelectionGroup">
                             <div id="u33_div" class=""></div>
                             <div id="u33_text" class="text ">
                               <p><span style="text-decoration:none;">2016</span></p>
@@ -293,7 +311,7 @@
                           </div>
 
                           <!-- 2015 (Rectangle) -->
-                          <div id="u34" class="ax_default box_1" data-label="2015" selectiongroup="下拉选项组2">
+                          <div id="u34" class="ax_default box_1" data-label="2015" selectiongroup="SelectionGroup">
                             <div id="u34_div" class=""></div>
                             <div id="u34_text" class="text ">
                               <p><span style="text-decoration:none;">2015</span></p>
@@ -301,7 +319,7 @@
                           </div>
 
                           <!-- 2014 (Rectangle) -->
-                          <div id="u35" class="ax_default box_1" data-label="2014" selectiongroup="下拉选项组2">
+                          <div id="u35" class="ax_default box_1" data-label="2014" selectiongroup="SelectionGroup">
                             <div id="u35_div" class=""></div>
                             <div id="u35_text" class="text ">
                               <p><span style="text-decoration:none;">2014</span></p>
@@ -361,7 +379,7 @@
                         <div id="u42_state0_content" class="panel_state_content">
 
                           <!-- Unnamed (Rectangle) -->
-                          <div id="u43" class="ax_default box_1" selectiongroup="下拉选项组2">
+                          <div id="u43" class="ax_default box_1" selectiongroup="SelectionGroup">
                             <div id="u43_div" class=""></div>
                             <div id="u43_text" class="text ">
                               <p><span style="text-decoration:none;">All Semester</span></p>
@@ -369,7 +387,7 @@
                           </div>
 
                           <!-- Unnamed (Rectangle) -->
-                          <div id="u44" class="ax_default box_1" selectiongroup="下拉选项组2">
+                          <div id="u44" class="ax_default box_1" selectiongroup="SelectionGroup">
                             <div id="u44_div" class=""></div>
                             <div id="u44_text" class="text ">
                               <p><span style="text-decoration:none;">Semester Two</span></p>
@@ -377,7 +395,7 @@
                           </div>
 
                           <!-- Unnamed (Rectangle) -->
-                          <div id="u45" class="ax_default box_1" selectiongroup="下拉选项组2">
+                          <div id="u45" class="ax_default box_1" selectiongroup="SelectionGroup">
                             <div id="u45_div" class=""></div>
                             <div id="u45_text" class="text ">
                               <p><span style="text-decoration:none;">Semester One</span></p>
@@ -385,7 +403,7 @@
                           </div>
 
                           <!-- Unnamed (Rectangle) -->
-                          <div id="u46" class="ax_default box_1" selectiongroup="下拉选项组2">
+                          <div id="u46" class="ax_default box_1" selectiongroup="SelectionGroup">
                             <div id="u46_div" class=""></div>
                             <div id="u46_text" class="text ">
                               <p><span style="text-decoration:none;">None</span></p>
@@ -464,8 +482,43 @@
         <!-- Search_Student_Input (Text Field) -->
         <div id="u55" class="ax_default box_1" data-label="Search_Student_Input">
           <div id="u55_div" class=""></div>
-          <input id="u55_input" type="text" value="" class="u55_input"/>
+          <input id="u55_input" type="text" value="" class="u55_input" onkeyup = exportStudent();/>
         </div>
+        <script>
+          var student = document.querySelector("#u55_input");
+
+          //student.onkeyup = function () {
+          function exportStudent(){
+            //var student = document.querySelector("#u55_input");
+            var xhr = new XMLHttpRequest();
+            xhr.open('post','export.php');
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+              if(xhr.readyState==4&&xhr.status==200){
+                //console.log(xhr.responseText);
+                var dataObj = JSON.parse(xhr.responseText);
+                console.log(dataObj);
+
+                var html = '<table>';
+
+                for (var i=0; i<dataObj.length; i++){
+                  var currentObj = dataObj[i];
+                  html+= '<tr>';
+
+                  html+= '<td>'+currentObj.StudentID+'</td>';
+                  html+= '<td>'+currentObj.EmployerID+'</td>';
+                  html+='</tr>';
+                }
+                html+='</table>';
+                document.querySelector('#u67_text').innerHTML = html;
+
+              }
+            }
+            xhr.send('studentName='+student.value);
+          }
+
+
+        </script>
 
         <!-- Search_Student_Cancel (SVG) -->
         <div id="u56" class="ax_default image ax_default_hidden" data-label="Search_Student_Cancel" style="display:none; visibility: hidden">
@@ -485,7 +538,7 @@
       </div>
 
       <!-- Filter_Results (Group) -->
-      <div id="u58" class="ax_default" data-label="Filter_Results" data-left="37" data-top="360" data-width="950" data-height="117">
+      <div id="u58" class="ax_default" data-label="Filter_Results" data-left="38" data-top="360" data-width="948" data-height="117">
 
         <!-- Unnamed (Rectangle) -->
         <div id="u59" class="ax_default box_1">
@@ -499,7 +552,7 @@
         <div id="u60" class="ax_default box_1">
           <div id="u60_div" class=""></div>
           <div id="u60_text" class="text ">
-            <p><span style="text-decoration:none;">Student ID Number</span></p>
+            <p><span style="text-decoration:none;">Student ID </span></p><p><span style="text-decoration:none;">Number</span></p>
           </div>
         </div>
 
@@ -507,7 +560,7 @@
         <div id="u61" class="ax_default box_1">
           <div id="u61_div" class=""></div>
           <div id="u61_text" class="text ">
-            <p><span style="text-decoration:none;">Mid-placement Score</span></p>
+            <p><span style="text-decoration:none;">Mid-Placement Score</span></p>
           </div>
         </div>
 
@@ -515,7 +568,7 @@
         <div id="u62" class="ax_default box_1">
           <div id="u62_div" class=""></div>
           <div id="u62_text" class="text ">
-            <p><span style="text-decoration:none;">End-placement Score</span></p>
+            <p><span style="text-decoration:none;">End-Placement Score</span></p>
           </div>
         </div>
 
@@ -539,24 +592,24 @@
         <div id="u65" class="ax_default box_1">
           <div id="u65_div" class=""></div>
           <div id="u65_text" class="text ">
-            <p><span style="text-decoration:none;">Total</span></p>
-          </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u66" class="ax_default box_1">
-          <div id="u66_div" class=""></div>
-          <div id="u66_text" class="text ">
             <p><span style="text-decoration:none;">Filter Results</span></p>
           </div>
         </div>
       </div>
 
       <!-- Unnamed (Rectangle) -->
+      <div id="u66" class="ax_default box_1">
+        <div id="u66_div" class=""></div>
+        <div id="u66_text" class="text ">
+          <p><span style="text-decoration:none;">Export</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
       <div id="u67" class="ax_default box_1">
         <div id="u67_div" class=""></div>
-        <div id="u67_text" class="text ">
-          <p><span style="text-decoration:none;">Export</span></p>
+        <div id="u67_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
         </div>
       </div>
     </div>

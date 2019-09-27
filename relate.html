@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>RELATE</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -39,13 +40,35 @@
     <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
     <script src="data/document.js"></script>
     <script src="files/relate/data.js"></script>
+    <script src="laydate/laydate.js"></script>
     <script type="text/javascript">
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
     </script>
+
+<!--日历不加小时-->
+<link rel="stylesheet" href="functions/pikaday/pikaday.css">
+<script src="functions/pikaday/pikaday.js"></script>
+<script src="functions/pikaday/pikadays.js"></script>
+<link rel="stylesheet" href="functions/pikaday/pikadays.css">
+<script>
+    $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  $(function() {
+    $( "#datepicker1" ).datepicker();
+  });
+
+</script>
+  
+
+ 
+  <!--日期时间控件-->
+  
   </head>
   <body>
+      
     <div id="base" class="">
 
       <!-- Unnamed (header) -->
@@ -771,12 +794,18 @@
                   </div>
 
                   <!-- Edit_Dates (Rectangle) -->
-                  <div id="u218" class="ax_default box_1" data-label="Edit_Dates">
+                  <div id="u218" class="ax_default box_1" data-label="Edit_Dates" onclick= showDate()>
                     <div id="u218_div" class=""></div>
                     <div id="u218_text" class="text ">
                       <p><span style="text-decoration:none;">Edit Dates</span></p>
                     </div>
                   </div>
+                  <script>
+                    function showDate() {
+                      var abc = document.getElementById("datepicker").value;  
+                      alert(abc);
+                    }
+                  </script>
 
                   <!-- Phase_4 (Rectangle) -->
                   <div id="u219" class="ax_default box_1" data-label="Phase_4">
@@ -812,12 +841,12 @@
                         <p><span style="text-decoration:none;">To</span></p>
                       </div>
                     </div>
-
+<form id="date" action="relate.php" method="post">
                     <!-- Placement_End_Date (Rectangle) -->
                     <div id="u224" class="ax_default label" data-label="Placement_End_Date">
                       <div id="u224_div" class=""></div>
                       <div id="u224_text" class="text ">
-                        <p><span style="text-decoration:none;">30 / 01 / 2020</span></p>
+                        <p><span style="text-decoration:none;"><input type="text" id="datepicker1" style="width:100px; border:none;"></span></p>
                       </div>
                     </div>
 
@@ -825,7 +854,7 @@
                     <div id="u225" class="ax_default label" data-label="Placement_Start_Date">
                       <div id="u225_div" class=""></div>
                       <div id="u225_text" class="text ">
-                        <p><span style="text-decoration:none;">12 / 12 / 2019</span></p>
+                        <p><span style="text-decoration:none;"><input type="text" id="datepicker" style="width:100px; border:none;"></span></p>
                       </div>
                     </div>
 
@@ -869,11 +898,31 @@
                     <div id="u231" class="ax_default box_1" data-label="Placement_Duration">
                       <div id="u231_div" class=""></div>
                       <div id="u231_text" class="text ">
-                        <p><span style="text-decoration:none;">Placement Duration</span></p>
+                          <input type="text" value="" id="differDay" onclick="Computation()" style="width:100px; border:none;"  /> 
+                         <!--去除周末的时间，节假日得自己输入，莫得数据库，调动外部链接太慢了-->
+<script>
+    function Computation(){   //sDate1和sDate2是2008-12-13格式
+     
+      //下边这段代码用来计算两个日期相差的天数  
+      var sDate1 = document.getElementById("datepicker").value;  
+      var sDate2 = document.getElementById("datepicker1").value;   
+      var   aDate,   oDate1,   oDate2,   iDays    
+      aDate = sDate1.split("/")    
+  oDate1 = new Date(aDate[1] + '-' + aDate[0] + '-' + aDate[2])   //转换为12-13-2008格式   
+  
+  aDate = sDate2.split("/")    
+  oDate2 = new Date(aDate[1] + '-' + aDate[0] + '-' + aDate[2])    
+  iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 /24)   //把相差的毫秒数转换为天数  
+    document.getElementById("differDay").value = iDays;  
+//上边这段代码块用来计算两个日期相差的天数 
+    }
+    
+    
+    </script>
                       </div>
                     </div>
                   </div>
-
+                </form>
                   <!-- Phase_5 (Rectangle) -->
                   <div id="u232" class="ax_default box_1" data-label="Phase_5">
                     <div id="u232_div" class=""></div>
@@ -905,7 +954,17 @@
                     <div id="u236" class="ax_default label" data-label="PAR_Deadline">
                       <div id="u236_div" class=""></div>
                       <div id="u236_text" class="text ">
-                        <p><span style="text-decoration:none;">25/12/2019&nbsp; 00:00:00</span></p>
+                          <input type="text" class="layui-input" id="test5" placeholder="yyyy-MM-dd HH:mm:ss" style="border:none;">
+                          <script>
+
+                              //时间选择器
+                              laydate.render({
+                                elem: '#test5'
+                                ,type: 'datetime'
+                              });
+                              </script>
+                            </script>
+                          
                       </div>
                     </div>
 
@@ -941,7 +1000,16 @@
                     <div id="u241" class="ax_default label" data-label="MPE_Deadline">
                       <div id="u241_div" class=""></div>
                       <div id="u241_text" class="text ">
-                        <p><span style="text-decoration:none;">25/12/2019&nbsp; 00:00:00</span></p>
+                          <input type="text" class="layui-input" id="test6" placeholder="yyyy-MM-dd HH:mm:ss" style="border:none;">
+                          <script>
+
+                              //时间选择器
+                              laydate.render({
+                                elem: '#test6'
+                                ,type: 'datetime'
+                              });
+                              </script>
+                            </script>
                       </div>
                     </div>
 
@@ -985,7 +1053,16 @@
                     <div id="u247" class="ax_default label" data-label="PCR_Deadline">
                       <div id="u247_div" class=""></div>
                       <div id="u247_text" class="text ">
-                        <p><span style="text-decoration:none;">25/12/2019&nbsp; 00:00:00</span></p>
+                          <input type="text" class="layui-input" id="test7" placeholder="yyyy-MM-dd HH:mm:ss" style="border:none;">
+                          <script>
+
+                              //时间选择器
+                              laydate.render({
+                                elem: '#test7'
+                                ,type: 'datetime'
+                              });
+                              </script>
+                            </script>
                       </div>
                     </div>
 
@@ -1021,7 +1098,16 @@
                     <div id="u252" class="ax_default label" data-label="EPE_Deadline">
                       <div id="u252_div" class=""></div>
                       <div id="u252_text" class="text ">
-                        <p><span style="text-decoration:none;">25/12/2019&nbsp; 00:00:00</span></p>
+                          <input type="text" class="layui-input" id="test2" placeholder="yyyy-MM-dd HH:mm:ss" style="border:none;">
+                          <script>
+
+                              //时间选择器
+                              laydate.render({
+                                elem: '#test2'
+                                ,type: 'datetime'
+                              });
+                              </script>
+                            </script>
                       </div>
                     </div>
 
@@ -1065,7 +1151,16 @@
                     <div id="u258" class="ax_default label" data-label="PRR_Deadline">
                       <div id="u258_div" class=""></div>
                       <div id="u258_text" class="text ">
-                        <p><span style="text-decoration:none;">25/12/2019&nbsp; 00:00:00</span></p>
+                          <input type="text" class="layui-input" id="test8" placeholder="yyyy-MM-dd HH:mm:ss" style=" border:none;">
+                          <script>
+
+                              //时间选择器
+                              laydate.render({
+                                elem: '#test8'
+                                ,type: 'datetime'
+                              });
+                              </script>
+                            </script>
                       </div>
                     </div>
 
@@ -1101,7 +1196,16 @@
                     <div id="u263" class="ax_default label" data-label="PO_Deadline">
                       <div id="u263_div" class=""></div>
                       <div id="u263_text" class="text ">
-                        <p><span style="text-decoration:none;">25/12/2019&nbsp; 00:00:00</span></p>
+                          <input type="text" class="layui-input" id="test9" placeholder="yyyy-MM-dd HH:mm:ss" style="border:none;">
+                          <script>
+
+                              //时间选择器
+                              laydate.render({
+                                elem: '#test9'
+                                ,type: 'datetime'
+                              });
+                              </script>
+                            </script>
                       </div>
                     </div>
 

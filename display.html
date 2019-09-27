@@ -464,7 +464,7 @@
         <!-- Search_Student_Input (Text Field) -->
         <div id="u55" class="ax_default box_1" data-label="Search_Student_Input">
           <div id="u55_div" class=""></div>
-          <input id="u55_input" type="text" value="" class="u55_input"/>
+          <input id="u55_input" type="text" value="" class="u55_input" onkeyup = inputStudent(); />
         </div>
 
         <!-- Search_Student_Cancel (SVG) -->
@@ -498,8 +498,12 @@
         <!-- Search_Employer_Input (Text Field) -->
         <div id="u60" class="ax_default box_1" data-label="Search_Employer_Input">
           <div id="u60_div" class=""></div>
-          <input id="u60_input" type="text" value="" class="u60_input"/>
+          <input id="u60_input" type="text" value="" class="u60_input" onkeyup = inputEmployer(); />
+          <!--datalist id="browsers">
+          </--datalist-->
         </div>
+
+
 
         <!-- Search_Employer_Cancel (SVG) -->
         <div id="u61" class="ax_default image ax_default_hidden" data-label="Search_Employer_Cancel" style="display:none; visibility: hidden">
@@ -543,7 +547,106 @@
           <div id="u66_text" class="text ">
             <p><span style="text-decoration:none;">Placement Position</span></p>
           </div>
+
+
+        <div id="u67" class="ax_default box_1" data-label="12345">
+          <div id="u67_div" class=""></div>
+          <div id="u67_text" class="text ">
+            <p><span style="text-decoration:none;"></span></p>
+          </div>
         </div>
+
+        </div>
+
+        <script>
+          var student = document.querySelector("#u55_input");
+
+          //student.onkeyup = function () {
+          function inputStudent(){
+            //var student = document.querySelector("#u55_input");
+            var xhr = new XMLHttpRequest(); //Create an asynchronous object
+            xhr.open('post','display.php'); //Set request line
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//Set request header
+            //Register state change events
+            xhr.onreadystatechange = function () {
+              //Determine if the status & request is successful and use the data
+              if(xhr.readyState==4&&xhr.status==200){
+                //console.log(xhr.responseText);
+                var dataObj = JSON.parse(xhr.responseText);//Parsing JSON data
+                console.log(dataObj);
+
+                //Prepare string
+                var html = '<table>';
+                //Generate tables based on json data
+                for (var i=0; i<dataObj.length; i++){
+                  var currentObj = dataObj[i];
+                  html+= '<tr>';
+
+                  html+= '<td class="student">'+currentObj.StudentID+'</td>';
+                  html+= '<td class="employer">'+currentObj.EmployerID+'</td>';
+                  html+= '<td class="role">'+currentObj.Role+'</td>';
+                  html+='</tr>';
+                }
+                html+='</table>';
+                document.querySelector('#u67_text').innerHTML = html; //Set to the page
+
+
+                //console.log(dataObj[0].StudentID);
+
+                /*var $sName = $("#u67_text").find('span').html()
+                var $cloneDiv64 = $("#u67_text").first().clone();
+
+                for (var i=1; i<dataObj.length; i++){
+                  if ( $sName == null || $sName.length == 0 ){
+                    $("#u67_text").find('span').html(dataObj[0].StudentID);
+                    $cloneDiv64.find('span').html(dataObj[i].StudentID);
+                    $cloneDiv64.appendTo("#u67");
+
+                    console.log(dataObj[i].StudentID);
+                  }else {
+                    $sName = $("#u67_text").find('span').html('');
+                  }
+                }*/
+              }
+            }
+            xhr.send('studentName='+student.value);
+          }
+        </script>
+
+        <script>
+          var employer = document.querySelector("#u60_input");
+          function inputEmployer() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('post', 'display.php');
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState == 4 && xhr.status == 200) {
+                //console.log(xhr.responseText);
+                var dataObj = JSON.parse(xhr.responseText);
+                console.log(dataObj);
+
+                //var html = '';
+                var html = '<table>';
+
+                for (var i=0; i<dataObj.length; i++){
+                  var currentObj = dataObj[i];
+                  html+= '<tr>';
+                  //html += "<option value='" + currentObj.EmployerID + "'></option>";
+                  html+= '<td class="student">'+currentObj.StudentID+'</td>';
+                  html+= '<td class="employer">'+currentObj.EmployerID+'</td>';
+                  html+= '<td class="role">'+currentObj.Role+'</td>';
+                  html+='</tr>';
+                }
+                html+='</table>';
+                document.querySelector('#u67_text').innerHTML = html;
+              }
+            }
+            xhr.send('employerName=' + employer.value);
+          }
+
+        </script>
+
+
       </div>
     </div>
     <script src="resources/scripts/axure/ios.js"></script>

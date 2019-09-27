@@ -1,0 +1,49 @@
+
+<HTML>  
+<HEAD>  
+<TITLE> New Document </TITLE>  
+
+  
+<script language="JavaScript">  
+// 计算两个日期的间隔天数  
+function Computation(sDate1, sDate2){   //sDate1和sDate2是2008-12-13格式    
+  var aDate, oDate1, oDate2, iDays    
+  aDate = sDate1.split("/")    
+  oDate1 = new Date(aDate[1] + '-' + aDate[0] + '-' + aDate[2])   //转换为12-13-2008格式   
+  
+  
+  aDate = sDate2.split("/")    
+  oDate2 = new Date(aDate[1] + '-' + aDate[0] + '-' + aDate[2])    
+  iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 /24)   //把相差的毫秒数转换为天数    
+  alert(iDays);
+  return iDays;
+      
+
+  //下边这段代码用来计算两个日期相差的天数  
+var sDate1 = document.all.dateCreatedStart.value;  
+ var sDate2 = document.all.dateCreatedStop.value;   
+      var   aDate,   oDate1,   oDate2,   iDays    
+      aDate = sDate1.split("/")    
+  oDate1 = new Date(aDate[1] + '-' + aDate[0] + '-' + aDate[2])   //转换为12-13-2008格式   
+  
+  aDate = sDate2.split("/")    
+  oDate2 = new Date(aDate[1] + '-' + aDate[0] + '-' + aDate[2])    
+  iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 /24)   //把相差的毫秒数转换为天数  
+    document.all.dateChangDu.value = iDays;  
+//上边这段代码块用来计算两个日期相差的天数 
+
+//隐藏日历  
+Calendar.prototype.hide = function() {  
+this.setDisplayStyle("select", "visible");  
+this.panel.style.visibility = "hidden";  
+}  
+</script>  
+  
+</HEAD>  
+  
+<BODY>  
+  
+<input type="button" value="aaa" onclick="Computation('14/12/2008','16/1/2009')" />  
+  
+</BODY>  
+</HTML>  
