@@ -1,32 +1,48 @@
 <?php
 include('db_conn.php');
 
-if(isset($_POST['datepicker'])) {
-    $datepicker = $_POST['datepicker'];
-    $datepicker1 = $_POST['datepicker1'];
-    function countWorkDay($datepicker,$datepicker1){
-        var sDay = new Date(Date.parse($datepicker.replace(/-/g, "/")));
-        var eDay = new Date(Date.parse($datepicker1.replace(/-/g, "/")));
-        var s_t_w = sDay.getDay(), e_t_w = eDay.getDay();
-        // 总相差天数
-        var diffDay = (eDay - sDay) / (1000 * 60 * 60 * 24) + 1;
-        if(parseInt(diffDay) == 0)
-            return parseInt(diffDay);
-        // 周末天数
-        var weekEnds = 0; 
-        for(var i = 0; i < diffDay; i++) 
-        { 
-            if(sDay.getDay() == 0 || sDay.getDay() == 6) 
-                weekEnds ++; 
-            sDay = sDay.valueOf(); 
-            sDay += 1000 * 60 * 60 * 24; 
-            sDay = new Date(sDay); 
-        } 
-        return parseInt(diffDay - weekEnds);
-    }
+if(isset($_POST['submit']))
+{
+	
+        $datepiker=$_POST['datepiker'];
+        $datepiker1=$_POST['datepiker1'];
+        $test5=$_POST['test5'];//PAR
+        $test6=$_POST['test6'];//MPE
+        $test5=$_POST['test7'];//PCR
+        $test5=$_POST['test2'];//EPE
+        $test5=$_POST['test8'];//PRR
+        $test5=$_POST['test9'];//PO
+      
+        $insertPAR="INSERT INTO assessmentitem (AssessmentName, AssessmentDateID, StartDate, DueDate) 
+        VALUES ('PAR','$test5','$datepiker', '$datepiker1')";
+        $mysqli->query($insertPAR);
+
+        $insertPAR="INSERT INTO assessmentitem (AssessmentName, AssessmentDateID, StartDate, DueDate) 
+        VALUES ('MPE','$test6','$datepiker', '$datepiker1')";
+        $mysqli->query($insertPAR);
+
+        $insertPAR="INSERT INTO assessmentitem (AssessmentName, AssessmentDateID, StartDate, DueDate) 
+        VALUES ('PCR','$test7','$datepiker', '$datepiker1')";
+        $mysqli->query($insertPAR);
+
+        $insertPAR="INSERT INTO assessmentitem (AssessmentName, AssessmentDateID, StartDate, DueDate) 
+        VALUES ('EPE','$test2','$datepiker', '$datepiker1')";
+        $mysqli->query($insertPAR);
+
+        $insertPAR="INSERT INTO assessmentitem (AssessmentName, AssessmentDateID, StartDate, DueDate) 
+        VALUES ('PRR','$test8','$datepiker', '$datepiker1')";
+        $mysqli->query($insertPAR);
+
+        $insertPAR="INSERT INTO assessmentitem (AssessmentName, AssessmentDateID, StartDate, DueDate) 
+        VALUES ('PO','$test9','$datepiker', '$datepiker1')";
+        $mysqli->query($insertPAR);
+
+
+        echo "<script>alert('The survey is submited');</script>";
+}
 
     header('Location: ./relate.html');
-}
+
 
 
 

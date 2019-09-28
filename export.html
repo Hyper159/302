@@ -44,24 +44,24 @@
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
     </script>
-    <!--export excel-->
-    <script src="functions/exportexcel/export.js"></script>    
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>    
-    <script src="functions/exportexcel/jquery-table2excel.js"></script>    
-    <script>    
-        $(function() {    
-            $("#btn").click(function(){    
-                $(".table2excel").table2excel({    
-                    exclude: ".noExl",    
-                    name: "Excel Document Name",    
-                    filename: "myFileName",    
-                    exclude_img: true,    
-                    exclude_links: true,    
-                    exclude_inputs: true    
-                });    
+
+<script src="functions/exportexcel/export.js"></script>    
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>    
+<script src="functions/exportexcel/jquery-table2excel.js"></script>    
+<script>    
+    $(function() {    
+        $(".export").click(function(){
+            $(".table2excel").table2excel({    
+                exclude: ".noExl",    
+                name: "Excel Document Name",    
+                filename: "myFileName",    
+                exclude_img: true,    
+                exclude_links: true,    
+                exclude_inputs: true    
             });    
         });    
-    </script>    
+    });    
+</script>    
   </head>
   <body>
     <div id="base" class="">
@@ -482,43 +482,8 @@
         <!-- Search_Student_Input (Text Field) -->
         <div id="u55" class="ax_default box_1" data-label="Search_Student_Input">
           <div id="u55_div" class=""></div>
-          <input id="u55_input" type="text" value="" class="u55_input" onkeyup = exportStudent();/>
+          <input id="u55_input" type="text" value="" class="u55_input" onkeyup = exportStudent();>
         </div>
-        <script>
-          var student = document.querySelector("#u55_input");
-
-          //student.onkeyup = function () {
-          function exportStudent(){
-            //var student = document.querySelector("#u55_input");
-            var xhr = new XMLHttpRequest();
-            xhr.open('post','export.php');
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function () {
-              if(xhr.readyState==4&&xhr.status==200){
-                //console.log(xhr.responseText);
-                var dataObj = JSON.parse(xhr.responseText);
-                console.log(dataObj);
-
-                var html = '<table>';
-
-                for (var i=0; i<dataObj.length; i++){
-                  var currentObj = dataObj[i];
-                  html+= '<tr>';
-
-                  html+= '<td>'+currentObj.StudentID+'</td>';
-                  html+= '<td>'+currentObj.EmployerID+'</td>';
-                  html+='</tr>';
-                }
-                html+='</table>';
-                document.querySelector('#u67_text').innerHTML = html;
-
-              }
-            }
-            xhr.send('studentName='+student.value);
-          }
-
-
-        </script>
 
         <!-- Search_Student_Cancel (SVG) -->
         <div id="u56" class="ax_default image ax_default_hidden" data-label="Search_Student_Cancel" style="display:none; visibility: hidden">
@@ -598,7 +563,7 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u66" class="ax_default box_1">
+      <div id="u66" class="ax_default box_1 export">
         <div id="u66_div" class=""></div>
         <div id="u66_text" class="text ">
           <p><span style="text-decoration:none;">Export</span></p>
@@ -606,12 +571,53 @@
       </div>
 
       <!-- Unnamed (Rectangle) -->
-      <div id="u67" class="ax_default box_1">
+      <div id="u67" class="ax_default box_1 table2excel" data-label="12345">
         <div id="u67_div" class=""></div>
-        <div id="u67_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
+        <div id="u67_text" class="text ">
+          <p><span style="text-decoration:none;"></span></p>
         </div>
       </div>
+      
+      <script>
+        var student = document.querySelector("#u55_input");
+
+        //student.onkeyup = function () {
+        function exportStudent(){
+          //var student = document.querySelector("#u55_input");
+          var xhr = new XMLHttpRequest();
+          xhr.open('post','export.php');
+          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xhr.onreadystatechange = function () {
+            if(xhr.readyState==4&&xhr.status==200){
+              //console.log(xhr.responseText);
+              var dataObj = JSON.parse(xhr.responseText);
+              console.log(dataObj);
+
+              var html = '<table>';
+
+              for (var i=0; i<dataObj.length; i++){
+                var currentObj = dataObj[i];
+                html+= '<tr>';
+                html+= '<td class="studentName">'+currentObj.StudentName+'</td>';
+                html+= '<td class="studentNumber">'+currentObj.StudentNumber+'</td>';
+                html+= '<td class="midPlacementScore">'+currentObj.midPlacementScore+'</td>';
+                html+= '<td class="endPlacementScore">'+currentObj.endPlacementScore+'</td>';
+                html+= '<td class="contextReportScore">'+currentObj.contextReportScore+'</td>';
+                html+= '<td class="OutputsScore">'+currentObj.OutputsScore+'</td>';
+                html+='</tr>';
+              }
+              html+='</table>';
+              document.querySelector('#u67_text').innerHTML = html;
+
+            }
+          }
+          xhr.send('studentName='+student.value);
+        }
+
+      </script>
+
+
+
     </div>
     <script src="resources/scripts/axure/ios.js"></script>
   </body>

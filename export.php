@@ -7,10 +7,7 @@ $studentName = $_POST['studentName'];
 
 
 if (isset($studentName)){
-    $selectStudent = "SELECT * FROM student, placement, assessmentItem 
-    WHERE placement.studentID = student.studentID and
-    placement.placementID = assessmentItem.placementID and
-    StudentID like '%$studentName%'";
+    $selectStudent = "SELECT * FROM assessment where StudentName like '%$studentName%'";
     $result = $mysqli->query($selectStudent);
     $data = array();
     if ($result->num_rows > 0 ){
@@ -18,7 +15,6 @@ if (isset($studentName)){
             $data[] = $row;
         }
     }
-
 
 
     echo json_encode($data);
